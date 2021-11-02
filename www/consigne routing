@@ -13,7 +13,7 @@ Créer un fichier routes.yml contenant :
     action: logout
 
 
-Créer un dossier "controller" contenant la class global et la class user
+Créer un dossier "controllers" contenant la class global et la class user
 Global aura une méthode home
 User aura les méthodes login et logout
 
