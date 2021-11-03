@@ -1,0 +1,20 @@
+/:
+  controller: main
+  action: home
+
+/login:
+  controller: user
+  action: login
+
+/logout:
+  controller: user
+  action: logout
+
+/register:
+  controller: user
+  action: register
+
+/dashboard:
+  controller: admin
+  action: home
+  security: true
