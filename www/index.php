@@ -1,14 +1,18 @@
 <?php
+namespace App;
 
 
 function myAutoloader( $class )
 {
+    // $class -> "App\Core\Security"
+    $class = str_ireplace("App\\Core\\","",$class);
+    // $class -> "Security"
     if(file_exists("core/".$class.".class.php")){
         include "core/".$class.".class.php";
     }
 }
 
-spl_autoload_register("myAutoloader");
+spl_autoload_register("App\myAutoloader");
 
 use App\Core\Security;
 
@@ -50,11 +54,11 @@ if(!file_exists($controllerFile)){
 
 include $controllerFile;
 
+$controller = "App\\Controller\\".$controller;
 if( !class_exists($controller)){
     die("La classe n'existe pas");
 }
 
-//   App\controllers\User ou App\controllers\Main .....
 $objectController = new $controller();
 
 
@@ -63,5 +67,3 @@ if( !method_exists($objectController, $action) ){
 }
 
 $objectController->$action();
-
-

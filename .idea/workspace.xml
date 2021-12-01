@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f96a460-3ac8-455e-82a0-1ad9ee238555" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/www/controllers/Admin.class.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/controllers/Main.class.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/core/Security.class.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/core/User.class.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/exo namespace/Security.class.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/exo namespace/SecurityUser.class.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/exo namespace/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/routes.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/core/View.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/views/back.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/views/front.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/views/login.view.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/views/register.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/www/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/controllers/Admin.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/controllers/Admin.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/controllers/Main.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/controllers/Main.class.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/controllers/User.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/controllers/User.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/core/Security.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/core/Security.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/core/User.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/core/User.class.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +25,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="20McqSvA1tyqtHW7GAIUtpZw9D3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -49,7 +57,8 @@
       <option name="presentableId" value="Default" />
       <updated>1635858088183</updated>
       <workItem from="1635858090942" duration="2819000" />
-      <workItem from="1635929421660" duration="6947000" />
+      <workItem from="1635929421660" duration="7408000" />
+      <workItem from="1638363836473" duration="4959000" />
     </task>
     <servers />
   </component>
@@ -66,5 +75,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

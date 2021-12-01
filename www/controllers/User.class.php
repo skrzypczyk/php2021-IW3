@@ -1,10 +1,16 @@
 <?php
+
+namespace App\Controller;
+
+use App\Core\User as UserClean;
+use App\Core\View;
+
 class User {
 
 
     public function login()
     {
-        echo "test login";
+        $view = new View("login");
     }
 
     public function logout()
@@ -15,12 +21,7 @@ class User {
 
     public function register()
     {
-        $lastname = "   SKrZYPcZYK";
-        //Nettoyage des champs
-        $lastname = User::cleanLastname($lastname);
-        echo $lastname;
-
-        echo "S'inscrire";
+        $view = new View("Register");
     }
 
 
