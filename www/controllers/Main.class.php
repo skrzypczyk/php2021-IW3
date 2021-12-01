@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Core\View;
+
 class Main{
 
     public function home()
@@ -9,4 +11,9 @@ class Main{
         echo "Welcome";
     }
 
+
+    public function contact()
+    {
+        $view = new View("contact");
+    }
 }

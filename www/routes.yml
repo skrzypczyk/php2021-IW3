@@ -2,6 +2,13 @@
   controller: main
   action: home
 
+
+
+
+/nous-contacter:
+  controller: main
+  action: contact
+
 /login:
   controller: user
   action: login

@@ -21,7 +21,7 @@ class User {
 
     public function register()
     {
-        $view = new View("Register");
+        $view = new View("Register", "back");
     }
 
 

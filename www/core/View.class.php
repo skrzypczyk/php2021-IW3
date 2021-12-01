@@ -5,25 +5,38 @@ namespace App\Core;
 class View{
 
     private $view;
+    private $template;
+    private $data = [];
 
-    public function __construct($view)
+    public function __construct($view, $template="front")
     {
         $this->setView($view);
+        $this->setTemplate($template);
     }
 
     public function setView($view):void
     {
         $this->view = strtolower($view);
     }
+    public function setTemplate($template):void
+    {
+        $this->template = strtolower($template);
+    }
+
+    public function assign($key, $value):void
+    {
+        $this->data[$key]=$value;
+    }
 
     public function __toString():string
     {
-        return "La vue c'est : ".$this->view;
+        return "La vue c'est : ".$this->view. " et le template c'est : ".$this->template;
     }
 
     public function __destruct()
     {
-        include "views/".$this->view.".view.php";
+        print_r($this->data);
+        include "views/".$this->template.".tpl.php";
     }
 
 }
