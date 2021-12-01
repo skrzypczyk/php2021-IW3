@@ -11,6 +11,7 @@ class User {
     public function login()
     {
         $view = new View("login");
+        $view->assign("title", "Ceci est le titre de la page login");
     }
 
     public function logout()
@@ -21,7 +22,7 @@ class User {
 
     public function register()
     {
-        $view = new View("Register", "back");
+        $view = new View("Register");
     }
 
 

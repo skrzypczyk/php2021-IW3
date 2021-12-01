@@ -15,6 +15,7 @@ class Admin{
 
         $view = new View("dashboard", "back");
         $view->assign("firstname", $firstname);
+        $view->assign("lastname", "SKRZYPCZYK");
     }
 
 
