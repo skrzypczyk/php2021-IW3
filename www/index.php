@@ -4,11 +4,13 @@ namespace App;
 
 function myAutoloader( $class )
 {
-    // $class -> "App\Core\Security"
-    $class = str_ireplace("App\\Core\\","",$class);
-    // $class -> "Security"
-    if(file_exists("core/".$class.".class.php")){
-        include "core/".$class.".class.php";
+    // $class -> "Core\Security" "Model\User
+    $class = str_ireplace("App\\","",$class);
+    // $class -> "Core/Security" "Model/User
+    $class = str_replace("\\","/",$class);
+    // $class -> "Core/Security"
+    if(file_exists($class.".class.php")){
+        include $class.".class.php";
     }
 }
 
@@ -47,7 +49,7 @@ $action = strtolower($routes[$uri]["action"]);
 // $controller = User
 // $action = login
 
-$controllerFile = "controllers/".$controller.".class.php";
+$controllerFile = "controller/".$controller.".class.php";
 if(!file_exists($controllerFile)){
     die("Le fichier controller n'existe pas");
 }

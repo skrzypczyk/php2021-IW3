@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Core\User as UserClean;
 use App\Core\View;
+use App\Model\User as UserModel;
 
 class User {
 
@@ -22,6 +23,17 @@ class User {
 
     public function register()
     {
+        $user = new UserModel();
+        $user->setEmail("y.skrzypczyk@gmail.com");
+        $user->setPassword("Test1234");
+        $user->setLastname("SKrzypCZK   ");
+        $user->setFirstname("  YveS");
+        $user->generateToken();
+
+        echo "<pre>";
+        print_r($user);
+
+
         $view = new View("Register");
     }
 
