@@ -23,6 +23,9 @@ class User {
 
     public function register()
     {
+
+
+
         $user = new UserModel();
         $user->setEmail("y.skrzypczyk@gmail.com");
         $user->setPassword("Test1234");
@@ -30,8 +33,7 @@ class User {
         $user->setFirstname("  YveS");
         $user->generateToken();
 
-        echo "<pre>";
-        print_r($user);
+        $user->save();
 
 
         $view = new View("Register");

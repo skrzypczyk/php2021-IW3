@@ -1,7 +1,9 @@
 <?php
 namespace App\Model;
 
-class User
+use App\Core\Sql;
+
+class User extends Sql
 {
     private $id = null;
     private $firstname = null;
@@ -11,6 +13,12 @@ class User
     private $password;
     private $token = null;
 
+    public function __construct()
+    {
+        echo "constructeur du model User";
+        parent::__construct();
+    }
+
     /**
      * @return null
      */
@@ -18,6 +26,7 @@ class User
     {
         return $this->id;
     }
+
 
     /**
      * @param null $id
@@ -125,5 +134,11 @@ class User
     }
 
 
+    public function save(): void
+    {
+        //Pré traitement par exemple
+        //echo "pre traitement";
+        parent::save();
+    }
 
 }

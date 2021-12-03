@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f96a460-3ac8-455e-82a0-1ad9ee238555" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/www/model/User.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/core/Sql.class.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/controllers/Admin.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/controller/Admin.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/controllers/Main.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/controller/Main.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/controllers/User.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/controller/User.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/core/View.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/core/View.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/views/back.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/view/back.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/views/contact.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/view/contact.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/views/dashboard.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/view/dashboard.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/views/front.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/view/front.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/views/login.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/view/login.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/views/register.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/view/register.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/controller/User.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/controller/User.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/model/User.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/model/User.class.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +51,7 @@
       <workItem from="1635858090942" duration="2819000" />
       <workItem from="1635929421660" duration="7408000" />
       <workItem from="1638363836473" duration="9270000" />
-      <workItem from="1638527151288" duration="2768000" />
+      <workItem from="1638527151288" duration="4016000" />
     </task>
     <servers />
   </component>
