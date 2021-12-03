@@ -9,7 +9,7 @@ class Security
     {
         /*
          * /dashboard:
-              controller: admin
+              Controller: admin
               action: home
               security: true
          *

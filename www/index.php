@@ -28,6 +28,7 @@ if(file_exists($fileRoutes)){
 }
 
 
+
 $uri = $_SERVER["REQUEST_URI"];
 
 if(empty($routes[$uri]) || empty($routes[$uri]["controller"]) || empty($routes[$uri]["action"])){
@@ -47,12 +48,12 @@ $action = strtolower($routes[$uri]["action"]);
 
 
 // $uri = /login
-// $controller = User
+// $Controller = User
 // $action = login
 
-$controllerFile = "controller/".$controller.".class.php";
+$controllerFile = "Controller/".$controller.".class.php";
 if(!file_exists($controllerFile)){
-    die("Le fichier controller n'existe pas");
+    die("Le fichier Controller n'existe pas");
 }
 
 include $controllerFile;
