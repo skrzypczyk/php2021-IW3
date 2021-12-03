@@ -6,12 +6,12 @@ use App\Core\Sql;
 class User extends Sql
 {
     private $id = null;
-    private $firstname = null;
-    private $lastname = null;
-    private $email;
-    private $status = 0;
-    private $password;
-    private $token = null;
+    protected $firstname = null;
+    protected $lastname = null;
+    protected $email;
+    protected $status = 0;
+    protected $password;
+    protected $token = null;
 
     public function __construct()
     {
@@ -130,7 +130,7 @@ class User extends Sql
     public function generateToken(): void
     {
         $bytes = random_bytes(128);
-        $this->token = str_shuffle(bin2hex($bytes));
+        $this->token = substr(str_shuffle(bin2hex($bytes)), 0, 255);
     }
 
 

@@ -23,12 +23,16 @@ abstract class Sql
         $getCalledClassExploded = explode("\\", strtolower(get_called_class())); // App\Model\User
         $table = DBPREFIXE.end($getCalledClassExploded);
 
-        $sql = "INSERT INTO ".$table." (firstname, lastname) VALUES (:firstname , :lastname)";
+        $colums = get_object_vars($this);
+        $varToExclude = get_class_vars(get_class());
+        $colums = array_diff_key($colums, $varToExclude);
 
-        echo $sql;
+
+        $sql = "INSERT INTO ".$table." (". implode(",", array_keys($colums)) .") VALUES (:". implode(",:", array_keys($colums)) .")";
+
 
         $queryPrepared = $this->pdo->prepare($sql);
-        $queryPrepared->execute( ["lastname"=>"SKRZYPCZYK", "firstname"=>"yves"] );
+        $queryPrepared->execute( $colums );
 
         //Si ID null alors insert sinon update
     }
