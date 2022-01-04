@@ -5,7 +5,7 @@ use App\Core\Sql;
 
 class User extends Sql
 {
-    private $id = null;
+    protected $id = null;
     protected $firstname = null;
     protected $lastname = null;
     protected $email;
@@ -27,14 +27,6 @@ class User extends Sql
         return $this->id;
     }
 
-
-    /**
-     * @param null $id
-     */
-    public function setId(?int $id): void
-    {
-        $this->id = $id;
-    }
 
     /**
      * @return null

@@ -6,6 +6,7 @@ abstract class Sql
 {
 
     private $pdo;
+    private $table;
 
     public function __construct()
     {
@@ -16,20 +17,42 @@ abstract class Sql
         }catch(\Exception $e){
             die("Erreur SQL : ".$e->getMessage());
         }
+
+        $getCalledClassExploded = explode("\\", strtolower(get_called_class())); // App\Model\User
+        $this->table = DBPREFIXE.end($getCalledClassExploded);
     }
 
-    protected function save(): void
+
+    /**
+     * @param null $id
+     */
+    public function setId(?int $id): self
     {
-        $getCalledClassExploded = explode("\\", strtolower(get_called_class())); // App\Model\User
-        $table = DBPREFIXE.end($getCalledClassExploded);
+        $sql = "SELECT * FROM ".$this->table." WHERE id=:id";
+        $queryPrepared = $this->pdo->prepare($sql);
+        $queryPrepared->execute( ["id"=>$id] );
+        return $queryPrepared->fetchObject(get_called_class());
+
+    }
+
+
+    public function save(): void
+    {
+
 
         $colums = get_object_vars($this);
         $varToExclude = get_class_vars(get_class());
         $colums = array_diff_key($colums, $varToExclude);
 
-
-        $sql = "INSERT INTO ".$table." (". implode(",", array_keys($colums)) .") VALUES (:". implode(",:", array_keys($colums)) .")";
-
+        if(is_null($this->getId())){
+            $sql = "INSERT INTO ".$this->table." (". implode(",", array_keys($colums)) .") VALUES (:". implode(",:", array_keys($colums)) .")";
+        }else{
+            $update = [];
+            foreach ($colums as $key=>$value) {
+                $update[] = $key."=:".$key;
+            }
+            $sql ="UPDATE ".$this->table." SET ".implode(",", $update)." WHERE id=:id";
+        }
 
         $queryPrepared = $this->pdo->prepare($sql);
         $queryPrepared->execute( $colums );

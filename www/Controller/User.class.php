@@ -24,15 +24,15 @@ class User {
     public function register()
     {
 
-
-
         $user = new UserModel();
-        //$user->setId(1);
+        $user = $user->setId(1);
+
         $user->setEmail("y.skrzypczyk@gmail.com");
-        $user->setPassword("Test1234");
-        $user->setLastname("SKrzypCZK   ");
-        $user->setFirstname("  YveS");
-        $user->generateToken();
+
+        //$user->setPassword("Test1234");
+        //$user->setLastname("SKrzypCZK   ");
+        //$user->setFirstname("  YveS");
+        //$user->generateToken();
 
         $user->save();
 
