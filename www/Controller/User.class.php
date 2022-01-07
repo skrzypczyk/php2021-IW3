@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Core\User as UserClean;
+use App\Core\Verificator;
 use App\Core\View;
 use App\Model\User as UserModel;
 
@@ -23,21 +24,19 @@ class User {
 
     public function register()
     {
-
         $user = new UserModel();
-        $user = $user->setId(1);
 
-        $user->setEmail("y.skrzypczyk@gmail.com");
 
-        //$user->setPassword("Test1234");
-        //$user->setLastname("SKrzypCZK   ");
-        //$user->setFirstname("  YveS");
-        //$user->generateToken();
+        if(!empty($_POST)) {
 
-        $user->save();
+            $result = Verificator::checkForm($user->getRegisterForm(), $_POST);
+
+            print_r($result);
+        }
 
 
         $view = new View("Register");
+        $view->assign("user", $user);
     }
 
 

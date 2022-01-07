@@ -28,6 +28,14 @@ class View{
         $this->data[$key]=$value;
     }
 
+    public function includePartial($partial, $config): void
+    {
+        if(!file_exists("View/Partial/".$partial.".partial.php")){
+            die("Le partial ".$partial." n'existe pas");
+        }
+        include "View/Partial/".$partial.".partial.php";
+    }
+
     public function __toString():string
     {
         return "La vue c'est : ".$this->view. " et le template c'est : ".$this->template;

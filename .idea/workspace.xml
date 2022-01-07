@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f96a460-3ac8-455e-82a0-1ad9ee238555" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/www/Core/Verificator.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/View/Partial/form.partial.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/Controller/User.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/Controller/User.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/Core/Sql.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/Core/Sql.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/Core/View.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/Core/View.class.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/Model/User.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/Model/User.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/View/register.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/View/register.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +57,7 @@
       <workItem from="1635929421660" duration="7408000" />
       <workItem from="1638363836473" duration="9270000" />
       <workItem from="1638527151288" duration="8574000" />
+      <workItem from="1641567138580" duration="3880000" />
     </task>
     <servers />
   </component>

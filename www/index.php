@@ -3,6 +3,8 @@ namespace App;
 
 require "conf.inc.php";
 
+//E
+
 function myAutoloader( $class )
 {
     // $class -> "Core\Security" "Model\User
